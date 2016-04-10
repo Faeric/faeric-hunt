@@ -1,0 +1,6 @@
+<h1>List of products</h1>
+<ul>
+  <% @prdlist.each do |product| %>
+  <li> <%= product[:name] %> (<%= product[:category] %>) </li>
+  <% end %>
+</ul>
