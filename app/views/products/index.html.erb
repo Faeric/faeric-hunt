@@ -1,6 +1,6 @@
 <h1>List of products</h1>
 <ul>
-  <% @prdlist.each do |product| %>
-  <li> <%= product[:name] %> (<%= product[:category] %>) </li>
+  <% @products.each do |product| %>
+  <li> <%= link_to product[:name] , product_path(product[:id]) %> (<%= product[:url] %>) </li>
   <% end %>
 </ul>
