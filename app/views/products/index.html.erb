@@ -1,4 +1,8 @@
 <h1>List of products</h1>
+<p>
+  <%= link_to "Revenir à l'acceuil", root_path, class: "btn btn-primary" %>
+  <%= link_to "Ajouter un produit", new_product_path, class: "btn btn-success" %>
+</p>
 <ul>
   <% @products.each do |product| %>
   <li> <%= link_to product[:name] , product_path(product[:id]) %> (<%= product[:url] %>) </li>
