@@ -5,6 +5,9 @@
 </p>
 <ul>
   <% @products.each do |product| %>
-  <li> <%= link_to product[:name] , product_path(product[:id]) %> (<%= product[:url] %>) </li>
+  <li>
+  <%= link_to product.name , product_path(product) %>
+  (<%= product.url %>)
+  </li>
   <% end %>
 </ul>
