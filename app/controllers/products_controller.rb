@@ -15,8 +15,11 @@ class ProductsController < ApplicationController
   def create
     #binding.pry
     @product = Product.new(product_params)
-    @product.save
-    redirect_to products_path
+    if @product.save
+      redirect_to products_path
+    else
+      render :new
+    end
   end
 
   def edit
