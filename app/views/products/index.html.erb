@@ -8,15 +8,27 @@
           <div class="product-arrow"></div>
           <div class='product-count'>95</div>
         </div>
-        <img src="http://unsplash.it/300/200" alt="kudoz" class="product-image hidden-xs">
+        <img src="http://unsplash.it/300/200?random" alt="kudoz" class="product-image hidden-xs">
         <div class='product-body'>
           <h3><%= product.name %></h3>
           <p><%= product.tagline %></p>
         </div>
         <ul class="list-inline product-controls hidden-sm hidden-xs">
-          <li><a href=""><i class="fa fa-heart"></i></a></li>
-          <li><a href=""><i class="fa fa-share"></i></a></li>
-          <li><a href=""><i class="fa fa-star"></i></a></li>
+          <li>
+          <%= link_to product_path(product) do %>
+            <i class="fa fa-eye"></i>
+          <% end %>
+          </li>
+          <li>
+          <%= link_to edit_product_path(product) do %>
+            <i class="fa fa-pencil"></i>
+          <% end %>
+          </li>
+          <li>
+          <%= link_to product_path(product), method: :delete do %>
+            <i class="fa fa-trash"></i>
+          <% end %>
+          </li>
         </ul>
       </div>
       <% end %>

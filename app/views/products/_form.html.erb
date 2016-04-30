@@ -1,5 +1,6 @@
 <%= simple_form_for @product do |f| %>
   <%= f.input :name, placeholder: "Google", label: "Nom du produit?" %>
   <%= f.input :url, placeholder: "http://google.fr", label: "Url du produit?" %>
+  <%= f.input :tagline, placeholder: "Best Search Engine", label: "Description du produit?" %>
   <%= f.button :submit, "Valider", class: "btn btn-primary" %>
 <% end %>
