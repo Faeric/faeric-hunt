@@ -20,6 +20,13 @@
 }
 
 /* Navbar logo */
+.navbar-wagon-brand {
+  color: $red;
+  font-size: 30px;
+}
+.navbar-wagon-brand:hover {
+  color: $red;
+}
 .navbar-wagon-brand img {
   width: 50px;
 }
