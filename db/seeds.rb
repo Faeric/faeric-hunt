@@ -7,8 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Product.destroy_all
-Product.create!(name: 'Lewagon', url: 'http://lewagon.org', tagline: 'Best coding school ... ever!')
-Product.create!(name: 'Google', url: 'http://google.fr', tagline: 'Simple Search Engine')
-Product.create!(name: 'Gandi.net', url: 'http://gandi.net', tagline: 'Hosting and Register.')
-Product.create!(name: 'Heroku', url: 'https://heroku.com', tagline: 'Powerfull Cloud Application Platform.')
-Product.create!(name: 'Nitrous', url: 'https://nitrous.io', tagline: 'Consistent Development Environments in the Cloud')
+User.destroy_all
+
+eric= User.create!(email: 'eric@me.fr', password: 'testtest')
+safa= User.create!(email: 'safa@me.fr', password: 'testtest')
+
+Product.create!(user: eric, name: 'Lewagon', url: 'http://lewagon.org', tagline: 'Best coding school ... ever!', category: 'education')
+Product.create!(user: safa, name: 'Google', url: 'http://google.fr', tagline: 'Simple Search Engine', category: 'tech')
+Product.create!(user: eric, name: 'Gandi.net', url: 'http://gandi.net', tagline: 'Hosting and Register.', category: 'tech')
+Product.create!(user: safa, name: 'Heroku', url: 'https://heroku.com', tagline: 'Powerfull Cloud Application Platform.', category: 'tech')
+Product.create!(user: eric, name: 'Nitrous', url: 'https://nitrous.io', tagline: 'Consistent Development Environments in the Cloud', category: 'tech')
